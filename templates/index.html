@@ -10,7 +10,11 @@
     <h2>Sube un video para transcribir</h2>
     <input type="file" id="videoFile">
     <button onclick="subirVideo()">Transcribir</button>
+    
     <p id="resultado"></p>
+    
+    <!-- Botón para descargar la transcripción -->
+    <button id="descargarBtn" style="display: none;" onclick="descargarTranscripcion()">Descargar Transcripción</button>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
