@@ -1,0 +1,7 @@
+Ejecutar el Proyecto
+
+Desde la terminal en Visual Studio Code, ejecuta:
+
+python app.py
+
+Ahora abre en tu navegador http://127.0.0.1:5000/ y podrás subir un video.
