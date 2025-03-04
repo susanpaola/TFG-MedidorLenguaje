@@ -3,6 +3,15 @@ function subirVideo() {
     let formData = new FormData();
     formData.append("file", fileInput);
 
+    let mensaje = document.getElementById("mensaje");
+    let resultado = document.getElementById("resultado");
+    let descargarBtn = document.getElementById("descargarBtn");
+
+    // Mensaje de estado para el usuario
+    mensaje.innerText = "Transcribiendo audio... Esto puede tardar unos minutos.";
+    resultado.innerText = "";
+    descargarBtn.style.display = "none";
+
     fetch("/transcribir", {
         method: "POST",
         body: formData
@@ -10,13 +19,18 @@ function subirVideo() {
     .then(response => response.json())
     .then(data => {
         if (data.error) {
-            document.getElementById("resultado").innerText = "Error: " + data.error;
+            mensaje.innerText = "Error en la transcripción.";
+            resultado.innerText = "Error: " + data.error;
         } else {
-            document.getElementById("resultado").innerText = data.transcripcion;
-            document.getElementById("descargarBtn").style.display = "block";
+            mensaje.innerText = "Transcripción completada con éxito.";
+            resultado.innerText = data.transcripcion;
+            descargarBtn.style.display = "block";
         }
     })
-    .catch(error => console.error("Error:", error));
+    .catch(error => {
+        mensaje.innerText = "Hubo un problema con la transcripción.";
+        console.error("Error:", error);
+    });
 }
 
 function descargarTranscripcion() {

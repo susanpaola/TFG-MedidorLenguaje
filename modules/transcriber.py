@@ -1,8 +1,14 @@
 import whisper
 
 class Transcriber:
-    @staticmethod
-    def transcribir_whisper(audio_path: str) -> str:
-        model = whisper.load_model("base")
-        result = model.transcribe(audio_path)
+    def __init__(self, model_size="base"):
+        self.model = whisper.load_model(model_size)  # Carga el modelo una vez
+    
+    def transcribir_whisper(self, audio_path: str) -> str:
+        result = self.model.transcribe(audio_path)
         return result["text"]
+
+# Ejemplo de uso:
+transcriber = Transcriber()  # Carga el modelo una vez
+texto = transcriber.transcribir_whisper("uploads/audio.wav")
+print(texto)
