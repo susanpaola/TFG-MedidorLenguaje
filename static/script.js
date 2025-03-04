@@ -1,5 +1,3 @@
-let archivoTranscripcion = "";
-
 function subirVideo() {
     let fileInput = document.getElementById("videoFile").files[0];
     let formData = new FormData();
@@ -11,15 +9,21 @@ function subirVideo() {
     })
     .then(response => response.json())
     .then(data => {
-        document.getElementById("resultado").innerText = data.transcripcion;
-        archivoTranscripcion = data.archivo;  // Guarda el nombre del archivo para descargar
-
-        // Mostrar botón de descarga
-        document.getElementById("descargarBtn").style.display = "block";
+        if (data.error) {
+            document.getElementById("resultado").innerText = "Error: " + data.error;
+        } else {
+            document.getElementById("resultado").innerText = data.transcripcion;
+            document.getElementById("descargarBtn").style.display = "block";
+        }
     })
     .catch(error => console.error("Error:", error));
 }
 
 function descargarTranscripcion() {
-    window.location.href = `/descargar/${archivoTranscripcion}`;
+    let texto = document.getElementById("resultado").innerText;
+    let blob = new Blob([texto], { type: "text/plain" });
+    let enlace = document.createElement("a");
+    enlace.href = URL.createObjectURL(blob);
+    enlace.download = "transcripcion.txt";
+    enlace.click();
 }
