@@ -1,11 +1,8 @@
 import subprocess
 
-def extraer_audio(video_path: str, audio_path: str):
-    comando = [
-        'ffmpeg', '-i', video_path, '-vn', '-acodec', 'mp3', audio_path, '-y'
+def extract_audio(video_path, audio_path):
+    command = [
+        "ffmpeg", "-i", video_path, "-vn",
+        "-acodec", "pcm_s16le", "-ar", "16000", "-ac", "1", audio_path, "-y"
     ]
-    try:
-        subprocess.run(comando, check=True)
-        print(f"Audio extraído correctamente: {audio_path}")
-    except subprocess.CalledProcessError as e:
-        print(f"Error al extraer audio: {e}")
+    subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
