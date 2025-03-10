@@ -8,7 +8,7 @@ function subirVideo() {
     let descargarBtn = document.getElementById("descargarBtn");
 
     // Mensaje de estado para el usuario
-    mensaje.innerText = "Transcribiendo audio... Esto puede tardar unos minutos.";
+    mensaje.innerText = "Transcribiendo audio... Esto puede tardar varios minutos.";
     resultado.innerText = "";
     descargarBtn.style.display = "none";
 
