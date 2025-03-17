@@ -1,43 +1,62 @@
-function subirVideo() {
+function subirArchivo() {
     let fileInput = document.getElementById("videoFile").files[0];
     let formData = new FormData();
     formData.append("file", fileInput);
 
     let mensaje = document.getElementById("mensaje");
-    let resultado = document.getElementById("resultado");
     let descargarBtn = document.getElementById("descargarBtn");
+    let progressBar = document.getElementById("progressBar");
+    let progressContainer = document.getElementById("progressContainer");
 
-    // Mensaje de estado para el usuario
+    // Mostrar barra de progreso
+    progressContainer.style.display = "block";
+    progressBar.value = 0;
     mensaje.innerText = "Transcribiendo audio... Esto puede tardar varios minutos.";
-    resultado.innerText = "";
     descargarBtn.style.display = "none";
 
     fetch("/transcribir", {
         method: "POST",
         body: formData
     })
-    .then(response => response.json())
+    .then(response => {
+        let totalSteps = 3; // Simulación de progreso (dividir, transcribir, guardar)
+        let step = 0;
+        let interval = setInterval(() => {
+            if (step < totalSteps) {
+                progressBar.value = (step + 1) * (100 / totalSteps);
+                step++;
+            } else {
+                clearInterval(interval);
+            }
+        }, 2000); // Simulación de progreso cada 2 segundos
+
+        return response.json();
+    })
     .then(data => {
         if (data.error) {
             mensaje.innerText = "Error en la transcripción.";
-            resultado.innerText = "Error: " + data.error;
         } else {
             mensaje.innerText = "Transcripción completada con éxito.";
-            resultado.innerText = data.transcripcion;
             descargarBtn.style.display = "block";
+            descargarBtn.setAttribute("data-file", data.archivo);
         }
+        progressContainer.style.display = "none";
     })
     .catch(error => {
         mensaje.innerText = "Hubo un problema con la transcripción.";
         console.error("Error:", error);
+        progressContainer.style.display = "none";
     });
 }
 
 function descargarTranscripcion() {
-    let texto = document.getElementById("resultado").innerText;
-    let blob = new Blob([texto], { type: "text/plain" });
-    let enlace = document.createElement("a");
-    enlace.href = URL.createObjectURL(blob);
-    enlace.download = "transcripcion.txt";
-    enlace.click();
+    let archivo = document.getElementById("descargarBtn").getAttribute("data-file");
+    if (archivo) {
+        window.location.href = "/descargar?file=" + encodeURIComponent(archivo);
+    }
 }
+
+// Modo oscuro
+document.getElementById("toggleDarkMode").addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+});

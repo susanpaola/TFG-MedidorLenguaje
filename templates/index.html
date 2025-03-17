@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transcriptor de Video</title>
+    <title>Transcriptor de Audio y Video</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h2>Sube un video para transcribir</h2>
+    <button id="toggleDarkMode">🌙 Modo Oscuro</button>
+
+    <h2>Sube un archivo de audio o video para transcribir</h2>
     <input type="file" id="videoFile">
-    <button onclick="subirVideo()">Transcribir</button>
+    <button onclick="subirArchivo()">Transcribir</button>
     
+    <!-- Barra de progreso -->
+    <div id="progressContainer" style="display: none;">
+        <progress id="progressBar" value="0" max="100"></progress>
+    </div>
+
     <!-- Mensaje de estado -->
     <p id="mensaje"></p>
-
-    <!-- Resultado de la transcripción -->
-    <p id="resultado"></p>
 
     <!-- Botón para descargar la transcripción -->
     <button id="descargarBtn" style="display: none;" onclick="descargarTranscripcion()">Descargar Transcripción</button>
