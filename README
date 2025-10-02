@@ -6,3 +6,5 @@ python app.py
 
 Ahora abre en tu navegador http://127.0.0.1:5000/ 
 y podrás subir un video o audio para poder ser transcrito.
+
+Nueva rama para el desarrollo del código.
