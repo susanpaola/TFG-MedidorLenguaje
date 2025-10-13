@@ -1,0 +1,21 @@
+# ==== Visual Studio ====
+.vs/
+*.user
+*.suo
+bin/
+obj/
+Debug/
+Release/
+
+# ==== Python ====
+_pycache_/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+venv/
+
+# ==== Otros temporales ====
+*.log
+*.tmp
