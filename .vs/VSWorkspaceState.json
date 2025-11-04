@@ -1,10 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\modules",
-    "\\static",
-    "\\templates"
+    "\\presentacion\\static",
+    "\\presentacion\\templates"
   ],
-  "SelectedNode": "\\static\\styles.css",
+  "SelectedNode": "\\negocio",
   "PreviewInSolutionExplorer": false
 }
