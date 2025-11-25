@@ -189,3 +189,10 @@ zeep==4.1.0
 zipp==1.0.0
 zope.event==4.4
 zope.interface==5.4.0
+
+flask>=2.1
+openai-whisper   # paquete whisper (requiere torch)
+torch            # especificar según tu máquina (CPU/GPU) si quieres control
+fpdf2            # para generar PDF (pip package name: fpdf2)
+python-multipart # si necesitas (no obligatorio)
+
