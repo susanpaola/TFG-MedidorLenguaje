@@ -85,5 +85,12 @@ def transcribir():
         current_app.logger.exception("Error durante la transcripción")
         return jsonify({"error": str(e)}), 500
 
+@app.route("/descargar")
+def descargar():
+    file_path = request.args.get("file")
+    if not file_path or not os.path.exists(file_path):
+        return "Archivo no encontrado", 404
+    return send_file(file_path, as_attachment=True)
+
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
