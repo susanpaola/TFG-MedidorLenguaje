@@ -4,8 +4,12 @@
     "\\negocio",
     "\\negocio\\controllers",
     "\\negocio\\entities",
-    "\\persistencia"
+    "\\negocio\\services",
+    "\\persistencia",
+    "\\presentacion",
+    "\\presentacion\\static",
+    "\\presentacion\\templates"
   ],
-  "SelectedNode": "\\negocio\\services",
+  "SelectedNode": "\\negocio\\entities\\transcription.py",
   "PreviewInSolutionExplorer": false
 }
