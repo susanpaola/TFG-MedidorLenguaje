@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\negocio\\entities\\transcription.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:negocio\\entities\\transcription.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\negocio\\services\\transcription_service.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:negocio\\services\\transcription_service.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\negocio\\services\\audio_service.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:negocio\\services\\audio_service.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\app.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\presentacion\\app.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:presentacion\\app.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,54 +34,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "app.py",
-              "DocumentMoniker": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\app.py",
-              "RelativeDocumentMoniker": "app.py",
-              "ToolTip": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\app.py",
-              "RelativeToolTip": "app.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-11-25T11:23:40.452Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "transcription.py",
-              "DocumentMoniker": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\negocio\\entities\\transcription.py",
-              "RelativeDocumentMoniker": "negocio\\entities\\transcription.py",
-              "ToolTip": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\negocio\\entities\\transcription.py",
-              "RelativeToolTip": "negocio\\entities\\transcription.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Title": "app.py",
+              "DocumentMoniker": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\presentacion\\app.py",
+              "RelativeDocumentMoniker": "presentacion\\app.py",
+              "ToolTip": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\presentacion\\app.py",
+              "RelativeToolTip": "presentacion\\app.py",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFMAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-11-25T11:14:18.412Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "transcription_service.py",
-              "DocumentMoniker": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\negocio\\services\\transcription_service.py",
-              "RelativeDocumentMoniker": "negocio\\services\\transcription_service.py",
-              "ToolTip": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\negocio\\services\\transcription_service.py",
-              "RelativeToolTip": "negocio\\services\\transcription_service.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-11-25T11:01:58.782Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "audio_service.py",
-              "DocumentMoniker": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\negocio\\services\\audio_service.py",
-              "RelativeDocumentMoniker": "negocio\\services\\audio_service.py",
-              "ToolTip": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\negocio\\services\\audio_service.py",
-              "RelativeToolTip": "negocio\\services\\audio_service.py",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAABIAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-11-11T10:05:26.237Z",
+              "WhenOpened": "2026-01-19T10:50:11.022Z",
               "EditorCaption": ""
             }
           ]

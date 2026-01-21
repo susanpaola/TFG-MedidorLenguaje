@@ -10,6 +10,6 @@
     "\\presentacion\\static",
     "\\presentacion\\templates"
   ],
-  "SelectedNode": "\\negocio\\entities\\transcription.py",
+  "SelectedNode": "\\presentacion\\app.py",
   "PreviewInSolutionExplorer": false
 }
