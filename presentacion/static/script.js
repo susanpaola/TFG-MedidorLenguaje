@@ -26,9 +26,9 @@ function subirArchivo() {
         .then(response => response.json())
         .then(data => {
             if (data.error) {
-                mensaje.innerText = "Error en la transcripción: " + (data.error || "");
+                mensaje.innerText = "Error en la transcripcion: " + (data.error || "");
             } else {
-                mensaje.innerText = "Transcripción completada con éxito.";
+                mensaje.innerText = "Transcripcion completada con exito.";
                 // Guardamos rutas devueltas en atributos
                 descargarTxt.style.display = "inline-block";
                 descargarTxt.setAttribute("data-file", data.txt);
@@ -39,7 +39,7 @@ function subirArchivo() {
             progressBar.value = 100;
         })
         .catch(error => {
-            mensaje.innerText = "Hubo un problema con la transcripción.";
+            mensaje.innerText = "Hubo un problema con la transcripcion.";
             console.error("Error:", error);
             progressContainer.style.display = "none";
         });

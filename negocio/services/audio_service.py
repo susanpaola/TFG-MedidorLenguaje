@@ -9,7 +9,7 @@ def ensure_dirs():
     os.makedirs(UPLOADS_DIR, exist_ok=True)
 
 def secure_unique_filename(original_name: str) -> str:
-    # crea nombre único para evitar colisiones
+    # crea nombre unico para evitar colisiones
     ext = os.path.splitext(original_name)[1]
     return f"{uuid.uuid4().hex}{ext}"
 

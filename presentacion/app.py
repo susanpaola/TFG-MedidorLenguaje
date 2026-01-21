@@ -34,7 +34,7 @@ def save_pdf(text: str, dest_path: str):
     pdf.add_page()
     pdf.set_auto_page_break(auto=True, margin=15)
     pdf.set_font("Arial", size=12)
-    # dividir en líneas manejables
+    # dividir en lineas manejables
     for line in text.split("\n"):
         pdf.multi_cell(0, 7, line)
     pdf.output(dest_path)
@@ -42,13 +42,13 @@ def save_pdf(text: str, dest_path: str):
 @app.route("/transcribir", methods=["POST"])
 def transcribir():
     if "file" not in request.files:
-        return jsonify({"error": "No se envió archivo."}), 400
+        return jsonify({"error": "No se envio archivo."}), 400
 
     file = request.files["file"]
     if file.filename == "":
-        return jsonify({"error": "Nombre de archivo vacío."}), 400
+        return jsonify({"error": "Nombre de archivo vacio."}), 400
 
-    # Guardar con nombre seguro y único
+    # Guardar con nombre seguro y unico
     original_filename = secure_unique_filename(file.filename)
     saved_path = os.path.join(UPLOAD_FOLDER, original_filename)
     file.save(saved_path)
@@ -69,7 +69,7 @@ def transcribir():
         segments = split_audio(audio_path)
         transcription_text = transcribe_segments(segments)
 
-        # Guardar transcripción .txt y .pdf
+        # Guardar transcripcion .txt y .pdf
         base_name = Path(original_filename).stem
         txt_path = os.path.join(TRANSCRIPTIONS_FOLDER, f"{base_name}.txt")
         pdf_path = os.path.join(TRANSCRIPTIONS_FOLDER, f"{base_name}.pdf")
@@ -79,10 +79,10 @@ def transcribir():
         return jsonify({
             "txt": txt_path,
             "pdf": pdf_path,
-            "message": "Transcripción completada."
+            "message": "Transcripcion completada."
         })
     except Exception as e:
-        current_app.logger.exception("Error durante la transcripción")
+        current_app.logger.exception("Error durante la transcripcion")
         return jsonify({"error": str(e)}), 500
 
 @app.route("/descargar")

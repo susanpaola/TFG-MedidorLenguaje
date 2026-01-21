@@ -2,7 +2,7 @@
 import whisper
 from typing import List
 
-# Cargar modelo globalmente al importar este módulo (evita recarga en cada petición)
+# Cargar modelo globalmente al importar este modulo (evita recarga en cada peticion)
 
 MODEL_NAME = "base" # aqui puedo cambiar por small, medium o large
 print(f"[INFO] Cargando modelo Whisper '{MODEL_NAME}'... (esto tarda al inicio)")
