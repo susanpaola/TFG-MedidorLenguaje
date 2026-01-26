@@ -1,36 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\negocio\\entities\\transcription.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:negocio\\entities\\transcription.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\negocio\\services\\audio_service.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:negocio\\services\\audio_service.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\negocio\\services\\transcription_service.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:negocio\\services\\transcription_service.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\presentacion\\templates\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:presentacion\\templates\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\presentacion\\static\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:presentacion\\static\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\presentacion\\static\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:presentacion\\static\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\presentacion\\app.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:presentacion\\app.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -38,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -55,97 +26,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "transcription.py",
-              "DocumentMoniker": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\negocio\\entities\\transcription.py",
-              "RelativeDocumentMoniker": "negocio\\entities\\transcription.py",
-              "ToolTip": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\negocio\\entities\\transcription.py",
-              "RelativeToolTip": "negocio\\entities\\transcription.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2026-01-21T09:15:11.107Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "audio_service.py",
-              "DocumentMoniker": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\negocio\\services\\audio_service.py",
-              "RelativeDocumentMoniker": "negocio\\services\\audio_service.py",
-              "ToolTip": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\negocio\\services\\audio_service.py",
-              "RelativeToolTip": "negocio\\services\\audio_service.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2026-01-21T09:14:48.072Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "transcription_service.py",
-              "DocumentMoniker": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\negocio\\services\\transcription_service.py",
-              "RelativeDocumentMoniker": "negocio\\services\\transcription_service.py",
-              "ToolTip": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\negocio\\services\\transcription_service.py",
-              "RelativeToolTip": "negocio\\services\\transcription_service.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2026-01-21T09:14:19.111Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "styles.css",
-              "DocumentMoniker": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\presentacion\\static\\styles.css",
-              "RelativeDocumentMoniker": "presentacion\\static\\styles.css",
-              "ToolTip": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\presentacion\\static\\styles.css",
-              "RelativeToolTip": "presentacion\\static\\styles.css",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-01-21T08:52:22.211Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "script.js",
-              "DocumentMoniker": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\presentacion\\static\\script.js",
-              "RelativeDocumentMoniker": "presentacion\\static\\script.js",
-              "ToolTip": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\presentacion\\static\\script.js",
-              "RelativeToolTip": "presentacion\\static\\script.js",
-              "ViewState": "AgIAACkAAAAAAAAAAAAAwCkAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-01-21T08:47:33.544Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\presentacion\\templates\\index.html",
-              "RelativeDocumentMoniker": "presentacion\\templates\\index.html",
-              "ToolTip": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\presentacion\\templates\\index.html",
-              "RelativeToolTip": "presentacion\\templates\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-01-21T08:43:17.793Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "app.py",
-              "DocumentMoniker": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\presentacion\\app.py",
-              "RelativeDocumentMoniker": "presentacion\\app.py",
-              "ToolTip": "C:\\Users\\susan\\source\\repos\\TFG-MedidorLenguaje\\presentacion\\app.py",
-              "RelativeToolTip": "presentacion\\app.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2026-01-19T10:50:11.022Z",
-              "EditorCaption": ""
             }
           ]
         }

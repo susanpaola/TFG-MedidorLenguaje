@@ -1,15 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\negocio",
-    "\\negocio\\controllers",
-    "\\negocio\\entities",
-    "\\negocio\\services",
-    "\\persistencia",
-    "\\presentacion",
-    "\\presentacion\\static",
-    "\\presentacion\\templates"
+    ""
   ],
-  "SelectedNode": "\\presentacion\\app.py",
+  "SelectedNode": "\\C:\\Users\\susan\\Source\\Repos\\TFG-MedidorLenguaje",
   "PreviewInSolutionExplorer": false
 }
