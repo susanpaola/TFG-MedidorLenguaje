@@ -1,10 +1,52 @@
-Ejecutar el Proyecto
+# Mi Proyecto de TFG - Transcripción de Audio/Video con Whisper y Flask
 
-Desde la terminal en Visual Studio Code, ejecuta:
+Nueva rama para el desarrollo del código -> Develop, que tiene la actualizacion del codigo con la nueva
+restructuración en carpetas y la implementacion de Flask para la interfaz web.
 
-python app.py
+El proyecto se estructuró como un paquete Python modular. 
+Para permitir imports absolutos entre capas (presentación, negocio y persistencia), se añadieron 
+archivos __init__.py y la aplicación Flask se ejecuta como módulo mediante python -m presentacion.app.”
 
-Ahora abre en tu navegador http://127.0.0.1:5000/ 
+**Pasos para ejecutar el proyecto:**
+
+- Crear el entorno virtual:
+python -m venv venv
+
+- Activar el entorno virtual:
+  - En Windows:
+	venv\Scripts\activate
+  - En macOS/Linux:
+	source venv/bin/activate
+
+- Se definieron las dependencias del proyecto en un archivo requirements.txt y se utilizó un entorno 
+virtual de Python para garantizar la reproducibilidad del entorno de ejecución. Se instalan las dependencias
+dentro del entorno virtual (venv) con: pip install -r requirements.txt
+
+- Instalar ffmpeg
+
+Desde la terminal en Visual Studio Code, con el venv activado 
+
+ejecuta:
+python -m presentacion.app
+
+Ahora abre en tu navegador http://127.0.0.1:5000
 y podrás subir un video o audio para poder ser transcrito.
 
-Nueva rama para el desarrollo del código.
+## Resumen
+Implementa la funcionalidad básica de transcripción de archivos de audio/video:
+- Extracción y conversión de audio con FFmpeg.
+- División en segmentos para transcripción.
+- Transcripción con Whisper (modelo 'base').
+- Guardado de resultado en .txt y .pdf.
+- Interfaz web sencilla para subir y descargar.
+
+## Archivos clave
+- negocio/services/audio_service.py
+- negocio/services/transcription_service.py
+- presentacion/app.py
+- presentacion/templates/index.html
+- presentacion/static/script.js, styles.css
+
+## Notas
+- `uploads/` y `transcriptions/` están ignoradas por .gitignore.
+- Próximos pasos: persistencia (SQLite), comprobación por hash para evitar re-transcribir.
