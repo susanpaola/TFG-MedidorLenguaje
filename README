@@ -22,7 +22,7 @@ python -m venv venv
 virtual de Python para garantizar la reproducibilidad del entorno de ejecución. Se instalan las dependencias
 dentro del entorno virtual (venv) con: pip install -r requirements.txt
 
-- Instalar ffmpeg
+- Instalar ffmpeg si es necesario y lo pide el sistema operativo.
 
 Desde la terminal en Visual Studio Code, con el venv activado 
 
