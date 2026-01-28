@@ -1,4 +1,4 @@
-# Mi Proyecto de TFG - Transcripción de Audio/Video con Whisper y Flask
+#Mi Proyecto de TFG - Transcripción de Audio/Video con Whisper y Flask
 
 Nueva rama para el desarrollo del código -> Develop, que tiene la actualizacion del codigo con la nueva
 restructuración en carpetas y la implementacion de Flask para la interfaz web.
