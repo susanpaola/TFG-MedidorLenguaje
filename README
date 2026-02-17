@@ -50,3 +50,9 @@ Implementa la funcionalidad básica de transcripción de archivos de audio/video
 ## Notas
 - `uploads/` y `transcriptions/` están ignoradas por .gitignore.
 - Próximos pasos: persistencia (SQLite), comprobación por hash para evitar re-transcribir.
+
+# Nuevas ramas:
+- Feature-CapaDominio: El desarrollo se organizó mediante una rama de integración (develop), 
+siguiendo una metodología incremental. 
+Cada capa del sistema se implementó en una rama independiente y posteriormente se integró en develop, 
+reservando la rama main para versiones estables.
