@@ -3,3 +3,10 @@ from dataclasses import dataclass
 """
     Entidad que representa un segmento de audio generado tras la división.
     """
+
+@dataclass
+class AudioSegment:
+    segment_index: int
+    start_time: float
+    end_time: float
+    segment_path: str
