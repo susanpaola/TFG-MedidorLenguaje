@@ -37,8 +37,8 @@ def convert_to_wav(input_path: str, output_path: str):
 
 def split_audio(audio_path: str, segment_time: int = 300):
     """
-    Divide audio en segmentos de `segment_time` segundos. Devuelve lista ordenada de paths.
-    Utiliza ffmpeg segment muxer.
+    Divide audio en segmentos de `segment_time` segundos.
+    Devuelve lista de entidades AudioSegment.
     """
     base_dir = os.path.dirname(audio_path)
     segments_folder = os.path.join(base_dir, "segments")
@@ -56,7 +56,26 @@ def split_audio(audio_path: str, segment_time: int = 300):
         for f in os.listdir(segments_folder)
         if f.endswith(".wav")
     ])
-    # si no se generaron segmentos (archivo corto), devolver el mismo audio
+
+    # Si no se generaron segmentos (archivo corto), devolver uno solo
     if not files:
-        return [audio_path]
-    return files
+        return [
+            AudioSegment(
+                segment_index=0,
+                start_time=0.0,
+                end_time=0.0,
+                segment_path=audio_path
+            )
+        ]
+
+    segments = []
+    for idx, path in enumerate(files):
+        segment = AudioSegment(
+            segment_index=idx,
+            start_time=idx * segment_time,
+            end_time=(idx + 1) * segment_time,
+            segment_path=path
+        )
+        segments.append(segment)
+
+    return segments
