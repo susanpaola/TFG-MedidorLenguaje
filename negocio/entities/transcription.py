@@ -8,4 +8,4 @@ class Transcription:
     file_audio: str
     transcription_txt: str
     transcription_pdf: str
-    created_at: datetime = field(default_factory=datetime.utcnow)
+    created_at: datetime = datetime.utcnow()
