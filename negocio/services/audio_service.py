@@ -1,4 +1,6 @@
 # negocio/services/audio_service.py
+from negocio.entities.audio_segment import AudioSegment
+
 import os
 import subprocess
 import uuid
