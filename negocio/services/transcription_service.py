@@ -1,6 +1,12 @@
 # negocio/services/transcription_service.py
+
+from datetime import datetime #Importanción de la biblioteca estandar
 import whisper
 from typing import List
+
+#Importaciones de mi proyecto
+from negocio.entities.audio_segment import AudioSegment
+from negocio.entities.transcription import Transcription
 
 # Cargar modelo globalmente al importar este modulo (evita recarga en cada peticion)
 
