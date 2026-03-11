@@ -32,6 +32,11 @@ python -m presentacion.app
 Ahora abre en tu navegador http://127.0.0.1:5000
 y podrás subir un video o audio para poder ser transcrito.
 
+Es importante tener instalado en el Windows el programa ffmpeg para que el proyecto 
+funcione correctamente, ya que es necesario para la extracción y conversión de audio.
+La instalación de ffmpeg varía según el sistema operativo, el enlace a la página oficial de ffmpeg es: https://ffmpeg.org/download.html, 
+por lo que se recomienda seguir las instrucciones específicas para tu plataforma e introducción en el Path.
+
 ## Resumen
 Implementa la funcionalidad básica de transcripción de archivos de audio/video:
 - Extracción y conversión de audio con FFmpeg.
@@ -56,3 +61,5 @@ Implementa la funcionalidad básica de transcripción de archivos de audio/video
 siguiendo una metodología incremental. 
 Cada capa del sistema se implementó en una rama independiente y posteriormente se integró en develop, 
 reservando la rama main para versiones estables.
+
+

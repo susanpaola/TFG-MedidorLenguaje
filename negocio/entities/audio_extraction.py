@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
 """
-    La entidad representa la extracción de audio a partir de un archivo multimedia.
+    La entidad representa la extraccion de audio a partir de un archivo multimedia.
     """
 
 @dataclass
