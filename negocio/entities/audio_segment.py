@@ -9,4 +9,5 @@ class AudioSegment:
     segment_index: int
     start_time: float
     end_time: float
+    text: str
     segment_path: str
