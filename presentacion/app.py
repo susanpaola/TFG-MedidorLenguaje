@@ -67,7 +67,8 @@ def transcribir():
 
         # split y transcribir
         segments = split_audio(audio_path)
-        transcription = transcribe_segments(segments)
+        #transcription_text = transcribe_segments(segments)
+        transcription, speech_segments = transcribe_segments(segments)
 
         # Guardar transcripcion .txt y .pdf
         base_name = Path(original_filename).stem

@@ -15,31 +15,39 @@ print(f"[INFO] Cargando modelo Whisper '{MODEL_NAME}'... (esto tarda al inicio)"
 model = whisper.load_model(MODEL_NAME)
 print("[INFO] Modelo cargado.")
 
-def transcribe_segments(audio_segments: List[AudioSegment], language: str = None) -> Transcription:
+def transcribe_segments(audio_segments: List[str], language: str = None):
     """
-    Transcribe una lista de AudioSegment y devuelve una entidad Transcription.
+    Transcribe audio segments and capture timestamps from Whisper.
     """
 
-    transcription_parts = []
+    transcription_text_parts = []
+    speech_segments: List[AudioSegment] = []
+
+    segment_counter = 0
 
     for seg in audio_segments:
-        result = model.transcribe(seg.segment_path, language=language) if language else model.transcribe(seg.segment_path)
+
+        result = model.transcribe(seg, language=language) if language else model.transcribe(seg)
+
         text = result.get("text", "").strip()
         if text:
-            transcription_parts.append(text)
+            transcription_text_parts.append(text)
 
-    full_text = "\n".join(transcription_parts)
+        whisper_segments = result.get("segments", [])
 
-    # Creamos entidad (los paths se asignarán desde app.py)
-    transcription = Transcription(
-        file_original="",
-        file_audio="",
-        transcription_txt="",
-        transcription_pdf="",
-        created_at=datetime.utcnow()
-    )
+        for ws in whisper_segments:
 
-    # Guardamos temporalmente el texto dentro del txt
-    transcription.transcription_txt = full_text
+            speech_segment = AudioSegment(
+                segment_index=segment_counter,
+                start_time=ws.get("start", 0.0),
+                end_time=ws.get("end", 0.0),
+                text=ws.get("text", "").strip(),
+                segment_path=seg
+            )
 
-    return transcription
+            speech_segments.append(speech_segment)
+            segment_counter += 1
+
+    transcription_text = "\n".join(transcription_text_parts)
+
+    return transcription_text, speech_segments
