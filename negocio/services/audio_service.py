@@ -57,25 +57,8 @@ def split_audio(audio_path: str, segment_time: int = 300):
         if f.endswith(".wav")
     ])
 
-    # Si no se generaron segmentos (archivo corto), devolver uno solo
+    # si no se generaron segmentos (archivo corto)
     if not files:
-        return [
-            AudioSegment(
-                segment_index=0,
-                start_time=0.0,
-                end_time=0.0,
-                segment_path=audio_path
-            )
-        ]
+        return [audio_path]
 
-    segments = []
-    for idx, path in enumerate(files):
-        segment = AudioSegment(
-            segment_index=idx,
-            start_time=idx * segment_time,
-            end_time=(idx + 1) * segment_time,
-            segment_path=path
-        )
-        segments.append(segment)
-
-    return segments
+    return files

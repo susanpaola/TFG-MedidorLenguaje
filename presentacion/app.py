@@ -68,24 +68,19 @@ def transcribir():
         # split y transcribir
         segments = split_audio(audio_path)
         #transcription_text = transcribe_segments(segments)
-        transcription, speech_segments = transcribe_segments(segments)
+        transcription_text, speech_segments = transcribe_segments(segments)
 
         # Guardar transcripcion .txt y .pdf
         base_name = Path(original_filename).stem
         txt_path = os.path.join(TRANSCRIPTIONS_FOLDER, f"{base_name}.txt")
         pdf_path = os.path.join(TRANSCRIPTIONS_FOLDER, f"{base_name}.pdf")
-        save_txt(transcription.transcription_txt, txt_path)
-        save_pdf(transcription.transcription_txt, pdf_path)
 
-        # Completar datos de la entidad
-        transcription.file_original = original_filename
-        transcription.file_audio = audio_path
-        transcription.transcription_txt = txt_path
-        transcription.transcription_pdf = pdf_path
+        save_txt(transcription_text, txt_path)
+        save_pdf(transcription_text, pdf_path)
 
         return jsonify({
-            "txt": transcription.transcription_txt,
-            "pdf": transcription.transcription_pdf,
+            "txt": txt_path,
+            "pdf": pdf_path,
             "message": "Transcripcion completada."
         })
     except Exception as e:
