@@ -2,6 +2,8 @@
 import os
 from flask import Flask, request, jsonify, render_template, send_file, current_app
 from werkzeug.utils import secure_filename
+
+from negocio.entities.transcription import Transcription
 from pathlib import Path
 from fpdf import FPDF
 
@@ -67,18 +69,29 @@ def transcribir():
 
         # split y transcribir
         segments = split_audio(audio_path)
-        transcription_text = transcribe_segments(segments)
+        transcription_text, speech_segments = transcribe_segments(segments)
 
-        # Guardar transcripcion .txt y .pdf
+        # Guardar archivos
         base_name = Path(original_filename).stem
         txt_path = os.path.join(TRANSCRIPTIONS_FOLDER, f"{base_name}.txt")
         pdf_path = os.path.join(TRANSCRIPTIONS_FOLDER, f"{base_name}.pdf")
+
         save_txt(transcription_text, txt_path)
         save_pdf(transcription_text, pdf_path)
 
+        # Crear objeto de dominio Transcription
+        transcription = Transcription(
+            file_original=original_filename,
+            file_audio=audio_path,
+            transcription_txt=txt_path,
+            transcription_pdf=pdf_path
+        )
+
+        # (podría asociar aquí speech_segments)
+
         return jsonify({
-            "txt": txt_path,
-            "pdf": pdf_path,
+            "txt": transcription.transcription_txt,
+            "pdf": transcription.transcription_pdf,
             "message": "Transcripcion completada."
         })
     except Exception as e:

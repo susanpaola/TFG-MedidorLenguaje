@@ -1,4 +1,6 @@
 # negocio/services/audio_service.py
+from negocio.entities.audio_segment import AudioSegment
+
 import os
 import subprocess
 import uuid
@@ -35,8 +37,8 @@ def convert_to_wav(input_path: str, output_path: str):
 
 def split_audio(audio_path: str, segment_time: int = 300):
     """
-    Divide audio en segmentos de `segment_time` segundos. Devuelve lista ordenada de paths.
-    Utiliza ffmpeg segment muxer.
+    Divide audio en segmentos de `segment_time` segundos.
+    Devuelve lista de entidades AudioSegment.
     """
     base_dir = os.path.dirname(audio_path)
     segments_folder = os.path.join(base_dir, "segments")
@@ -54,7 +56,9 @@ def split_audio(audio_path: str, segment_time: int = 300):
         for f in os.listdir(segments_folder)
         if f.endswith(".wav")
     ])
-    # si no se generaron segmentos (archivo corto), devolver el mismo audio
+
+    # si no se generaron segmentos (archivo corto)
     if not files:
         return [audio_path]
+
     return files
