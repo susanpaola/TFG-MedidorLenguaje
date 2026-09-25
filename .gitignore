@@ -19,3 +19,5 @@ venv/
 # ==== Otros temporales ====
 *.log
 *.tmp
+uploads/
+transcriptions/
