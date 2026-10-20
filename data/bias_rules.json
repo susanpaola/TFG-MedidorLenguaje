@@ -1,0 +1,58 @@
+[
+  {
+    "id": "edad-tecnologia-001",
+    "category": "edad",
+    "analysis_type": "estereotipo",
+    "conditions": {
+      "all_of": [
+        ["\\bpersonas mayores\\b", "\\blos mayores\\b", "\\blas mayores\\b", "\\bancianos?\\b"],
+        ["\\bno (?:entienden|saben usar|son buenos? (?:en|con)|tienen experiencia (?:en|con)) (?:la )?tecnolog[ií]as?\\b", "\\b(?:son )?malos? (?:en|con) (?:la )?tecnolog[ií]as?\\b"]
+      ]
+    },
+    "suggestion": "Evitar generalizar por edad y valorar el conocimiento tecnológico de cada persona de forma individual.",
+    "explanation": "La regla requiere una referencia a personas mayores y una afirmación negativa sobre su competencia tecnológica en la misma oración.",
+    "severity": "media"
+  },
+  {
+    "id": "genero-liderazgo-001",
+    "category": "genero",
+    "analysis_type": "estereotipo",
+    "conditions": {
+      "all_of": [
+        ["\\blas mujeres\\b", "\\bmujeres\\b"],
+        ["\\b(?:demasiado )?emocionales?\\b"],
+        ["\\bdirigir(?: equipos)?\\b", "\\bliderar\\b"]
+      ]
+    },
+    "suggestion": "Valorar el liderazgo mediante competencias, experiencia y desempeño individual.",
+    "explanation": "Relaciona un estereotipo sobre las mujeres con una supuesta falta de capacidad para liderar.",
+    "severity": "media"
+  },
+  {
+    "id": "discapacidad-dependencia-001",
+    "category": "discapacidad",
+    "analysis_type": "generalizacion",
+    "conditions": {
+      "all_of": [
+        ["\\bpersonas con discapacidad\\b", "\\bpersonas discapacitadas\\b"],
+        ["\\bsiempre necesitan ayuda\\b", "\\bdependen siempre de (?:los )?dem[aá]s\\b"]
+      ]
+    },
+    "suggestion": "Describir las necesidades de apoyo de forma individual y teniendo en cuenta la accesibilidad del entorno.",
+    "explanation": "Presupone dependencia para todas las personas con discapacidad.",
+    "severity": "alta"
+  },
+  {
+    "id": "lenguaje-inclusivo-alumnado-001",
+    "category": "genero",
+    "analysis_type": "sugerencia_lenguaje_inclusivo",
+    "conditions": {
+      "all_of": [
+        ["\\b(?:los |todos los )alumnos\\b"]
+      ]
+    },
+    "suggestion": "Cuando se haga referencia a un grupo mixto o no especificado, considerar “el alumnado” o “los estudiantes”.",
+    "explanation": "Detecta un posible uso del masculino genérico. Es una sugerencia de redacción inclusiva, no una confirmación automática de sesgo.",
+    "severity": "baja"
+  }
+]
