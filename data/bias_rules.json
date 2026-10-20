@@ -6,7 +6,7 @@
     "conditions": {
       "all_of": [
         ["\\bpersonas mayores\\b", "\\blos mayores\\b", "\\blas mayores\\b", "\\bancianos?\\b"],
-        ["\\bno (?:entienden|saben usar|son buenos? (?:en|con)|tienen experiencia (?:en|con)) (?:la )?tecnolog[ií]as?\\b", "\\b(?:son )?malos? (?:en|con) (?:la )?tecnolog[ií]as?\\b"]
+        [ "\\bno (?:entienden|saben usar|son buen[oa]s? (?:en|con)|tienen experiencia (?:en|con)) (?:la )?tecnolog[ií]as?\\b", "\\b(?:son )?mal[oa]s? (?:en|con) (?:la )?tecnolog[ií]as?\\b" ]
       ]
     },
     "suggestion": "Evitar generalizar por edad y valorar el conocimiento tecnológico de cada persona de forma individual.",
