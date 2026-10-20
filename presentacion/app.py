@@ -12,6 +12,7 @@ from negocio.services.audio_service import (
     extract_audio_from_video, convert_to_wav, split_audio, UPLOADS_DIR
 )
 from negocio.services.transcription_service import transcribe_segments
+from negocio.services.bias_analysis_service import analyze_text
 
 # Config
 app = Flask(__name__, template_folder="templates", static_folder="static")
@@ -70,6 +71,7 @@ def transcribir():
         # split y transcribir
         segments = split_audio(audio_path)
         transcription_text, speech_segments = transcribe_segments(segments)
+        analysis_results = analyze_text(transcription_text)
 
         # Guardar archivos
         base_name = Path(original_filename).stem
@@ -87,11 +89,12 @@ def transcribir():
             transcription_pdf=pdf_path
         )
 
-        # (podría asociar aquí speech_segments)
+        # (podrÃ­a asociar aquÃ­ speech_segments)
 
         return jsonify({
             "txt": transcription.transcription_txt,
             "pdf": transcription.transcription_pdf,
+            "analysis": analysis_results,
             "message": "Transcripcion completada."
         })
     except Exception as e:
