@@ -12,12 +12,14 @@ function subirArchivo() {
     let descargarPdf = document.getElementById("descargarPdf");
     let progressContainer = document.getElementById("progressContainer");
     let progressBar = document.getElementById("progressBar");
+    let analysisContainer = document.getElementById("analysisContainer");
 
     progressContainer.style.display = "block";
     progressBar.style.animation = "loading 2s infinite linear";
     mensaje.innerText = "Transcribiendo audio... Esto puede tardar varios minutos.";
     descargarTxt.style.display = "none";
     descargarPdf.style.display = "none";
+    analysisContainer.style.display = "none";
 
     fetch("/transcribir", {
         method: "POST",
@@ -34,6 +36,7 @@ function subirArchivo() {
                 descargarTxt.setAttribute("data-file", data.txt);
                 descargarPdf.style.display = "inline-block";
                 descargarPdf.setAttribute("data-file", data.pdf);
+                mostrarAnalisis(data.analysis || []);
             }
             progressBar.style.animation = "none";
             progressBar.value = 100;
@@ -43,6 +46,26 @@ function subirArchivo() {
             console.error("Error:", error);
             progressContainer.style.display = "none";
         });
+}
+
+function mostrarAnalisis(resultados) {
+    let analysisContainer = document.getElementById("analysisContainer");
+    let analysisSummary = document.getElementById("analysisSummary");
+    let analysisList = document.getElementById("analysisList");
+    analysisList.replaceChildren();
+    analysisContainer.style.display = "block";
+
+    if (resultados.length === 0) {
+        analysisSummary.innerText = "No se han detectado coincidencias con las reglas configuradas.";
+        return;
+    }
+
+    analysisSummary.innerText = `Se han encontrado ${resultados.length} posible(s) incidencia(s) para revisar.`;
+    resultados.forEach(resultado => {
+        let item = document.createElement("li");
+        item.textContent = `[${resultado.category} · ${resultado.severity}] ${resultado.sentence} Sugerencia: ${resultado.suggestion}`;
+        analysisList.appendChild(item);
+    });
 }
 
 function descargarTranscripcion(tipo) {
